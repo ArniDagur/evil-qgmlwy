@@ -40,7 +40,7 @@
       "F" 'evil-beginning-of-line
       "B" 'evil-end-of-line)
     (evil-define-key '(normal visual) keymap
-      "w" 'undo-tree-undo
+      "w" 'undo-tree-undo)
     (evil-define-key 'normal keymap
       (kbd "M-u") 'evil-open-above
       (kbd "M-e") 'evil-open-below
@@ -52,21 +52,21 @@
       (kbd "M-a") 'evil-insert)
     (evil-define-key 'operator keymap
       "o" 'evil-forward-char)
-    ; (if evil-qgmlwy-use-snipe
-      ; (evil-define-key '(motion normal visual) keymap
-          ; "l" 'evil-find-char
-          ; "L" 'evil-find-char-backward
-          ; "t" 'evil-find-char-to
-          ; "T" 'evil-find-char-to-backward)
-     ; (;; XXX https://github.com/hlissner/evil-snipe/issues/46
-      ; (evil-snipe-def 1 inclusive "t" "T")
-      ; (evil-snipe-def 1 exclusive "j" "J")
-      ; (evil-define-key '(motion normal visual) keymap
-        ; "l" 'evil-snipe-t
-        ; "L" 'evil-snipe-T
-        ; "t" 'evil-snipe-j
-        ; "T" 'evil-snipe-J)))
-      keymap)))
+    (if evil-qgmlwy-use-snipe
+      (evil-define-key '(motion normal visual) keymap
+          "l" 'evil-find-char
+          "L" 'evil-find-char-backward
+          "t" 'evil-find-char-to
+          "T" 'evil-find-char-to-backward)
+      (;; XXX https://github.com/hlissner/evil-snipe/issues/46
+      (evil-snipe-def 1 inclusive "t" "T")
+      (evil-snipe-def 1 exclusive "j" "J")
+      (evil-define-key '(motion normal visual) keymap
+        "l" 'evil-snipe-t
+        "L" 'evil-snipe-T
+        "t" 'evil-snipe-j
+        "T" 'evil-snipe-J)))
+      keymap))
 
 (defvar evil-qgmlwy-keymap
   (evil-qgmlwy--make-keymap)
