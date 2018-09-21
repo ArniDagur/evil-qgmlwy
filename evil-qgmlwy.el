@@ -66,7 +66,7 @@
         "L" 'evil-snipe-T
         "t" 'evil-snipe-j
         "T" 'evil-snipe-J)))
-      keymap))
+      keymap)))
 
 (defvar evil-qgmlwy-keymap
   (evil-qgmlwy--make-keymap)
