@@ -54,10 +54,10 @@
       "o" 'evil-forward-char)
     (if evil-qgmlwy-use-snipe
       (evil-define-key '(motion normal visual) keymap
-          "l" 'evil-find-char
-          "L" 'evil-find-char-backward
-          "t" 'evil-find-char-to
-          "T" 'evil-find-char-to-backward)
+        "l" 'evil-find-char
+        "L" 'evil-find-char-backward
+        "t" 'evil-find-char-to
+        "T" 'evil-find-char-to-backward)
       (;; XXX https://github.com/hlissner/evil-snipe/issues/46
       (evil-snipe-def 1 inclusive "t" "T")
       (evil-snipe-def 1 exclusive "j" "J")
@@ -79,8 +79,7 @@
 ;;;###autoload
 (define-minor-mode evil-qgmlwy-mode
   "Minor mode with evil-mode enhancements for the QGMLWY keyboard layout."
-  :keymap evil-qgmlwy-keymap
-  :lighter " hnei")
+  :keymap evil-qgmlwy-keymap)
 
 ;;;###autoload
 (define-globalized-minor-mode global-evil-qgmlwy-mode
